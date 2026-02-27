@@ -43,7 +43,7 @@ public class User {
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
 
-    public Long getId() {
+        public Long getId() {
         return id;
     }
 

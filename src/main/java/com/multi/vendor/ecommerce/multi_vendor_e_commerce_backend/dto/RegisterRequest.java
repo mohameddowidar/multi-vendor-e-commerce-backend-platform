@@ -3,13 +3,15 @@ package com.multi.vendor.ecommerce.multi_vendor_e_commerce_backend.dto;
 import com.multi.vendor.ecommerce.multi_vendor_e_commerce_backend.enums.Role;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 
 public class RegisterRequest {
 
-    @NotBlank
+    @NotBlank(message = "email is required")
     @Email
     private String email;
-    @NotBlank
+    @NotBlank(message = "Password is required")
+    @Size(min= 6, max = 8, message = "Password must not exceed 8 characters")
     private String password;
     @NotBlank
     private String fullName;
